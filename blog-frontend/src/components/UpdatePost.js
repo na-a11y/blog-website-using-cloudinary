@@ -14,7 +14,7 @@ const UpdatePost = () => {
 
   // Fetch existing post data to populate the form
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/blog/posts/${id}`)
+    axios.get(`https://blog-website-using-cloudinary.vercel.app/api/blog/posts/${id}`)
       .then(response => {
         setTitle(response.data.title);
         setContent(response.data.content);
@@ -41,7 +41,7 @@ const UpdatePost = () => {
     }
 
     try {
-      await axios.put(`http://localhost:5000/api/blog/posts/${id}`, formData, {
+      await axios.put(`https://blog-website-using-cloudinary.vercel.app/api/blog/posts/${id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

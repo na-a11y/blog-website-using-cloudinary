@@ -90,3 +90,67 @@ h2{
   background-color: #2980b9;
 } */
 
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  border-radius: 5px;
+  background-color: #f7f7f7; /* Light background for the entire pagination */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.pagination li {
+  margin: 0 3px;
+}
+
+.pagination button {
+  padding: 10px 15px;
+  border: none;
+  background-color: transparent;
+  color: #3498db; /* Main color */
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.pagination button:hover {
+  background-color: #3498db;
+  color: white;
+  transform: scale(1.05);
+}
+
+.pagination li.active button {
+  background-color: #2980b9; /* Active page background color */
+  color: white;
+  cursor: default;
+  font-weight: bold;
+  transform: scale(1.1); /* Slightly larger active page */
+}
+
+.pagination li.disabled button {
+  background-color: #d3d3d3;
+  color: #a9a9a9; /* Gray color for disabled state */
+  cursor: not-allowed;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Additional styling for smoother transitions */
+.pagination button {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pagination button:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.4); /* Blue glow effect */
+}
